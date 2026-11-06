@@ -34,19 +34,19 @@ div[data-testid="stDataFrame"] { border:1px solid #DCE7EA; border-radius:12px; }
 @st.cache_resource
 def load_model():
     if not MODEL_PATH.exists():
-        st.error("Model file not found. Run \`python train_model.py\` first.")
+        st.error("Model file not found. Run python train_model.py first.")
         st.stop()
     return joblib.load(MODEL_PATH)
 
 @st.cache_data
 def load_data():
     if not DATA_PATH.exists():
-        st.error("Dataset not found. Run \`python generate_data.py\` first.")
+        st.error("Dataset not found. Run python generate_data.py first.")
         st.stop()
     return pd.read_csv(DATA_PATH)
 
 if not METRICS_PATH.exists():
-    st.error("Evaluation metrics not found. Run \`python train_model.py\` first.")
+    st.error("Evaluation metrics not found. Run python train_model.py first.")
     st.stop()
 
 students = load_data()
