@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.8417,
+  "precision": 0.7576,
+  "recall": 0.6944,
+  "f1_score": 0.7246,
+  "confusion_matrix": [
+    [76, 8],
+    [11, 25]
+  ],
+  "test_rows": 120,
+  "train_rows": 480,
+  "features": [
+    "attendance_pct",
+    "study_hours_per_day",
+    "assignment_avg",
+    "previous_exam_score",
+    "missed_assignments",
+    "sleep_hours",
+    "support_sessions"
+  ],
+  "model": "RandomForestClassifier",
+  "data_note": "Synthetic demonstration data; labels come from a composite-risk rule."
+}
